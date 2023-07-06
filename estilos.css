@@ -11,6 +11,10 @@ body{
     background-color: rgb(230, 230, 230);
 }
 
+h1{
+    padding: 10px;
+}
+
 
 .textonav{ /*EESTN2 Emilio Rebuelto*/
     margin-right: auto;
@@ -152,9 +156,7 @@ input:focus{
         padding: 0px;
         margin-top: 13px;
     }
-    .enlacenav{
-
-    }
+    
 }
 
 

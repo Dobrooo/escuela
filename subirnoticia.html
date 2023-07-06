@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EESTN2 Emilio Rebuelto</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<script type="text/javascript" src="funciones.js">  
+</script>
+
+
+<script type="text/javascript"                                       
+  src="libreria.js"> 
+</script>
+<body>  
+    
+
+
+
+
+        <nav>
+            <p class="textonav"><a href="index.php"><img src="img/Sin nombre.png" alt=""></a></p>            <a class="enlacenav" href="index.html">Página principal</a>
+            <a class="enlacenav" href="programas.html">Programas de Materias</a>
+            <a class="enlacenav" href="https://sites.google.com/view/bibliotecadelaeestn2020">Biblioteca</a>
+            <a class="enlacenav" href="https://www.instagram.com/tecnica2berisso/?hl=es-la" target="_blank">Instagram</a>
+        </nav>
+        
+        <div class="principal">
+            <section>
+
+                <p>Enviá tus consultas o recomendaciones.</p>
+                <form action="subirnoticia.php" method="post" id="envios">
+                    <input type="text" placeholder="Titulo" name="titulo" id="titulo" required>
+                    <input type="date" placeholder="Fecha" name="fecha" id="fecha" required>
+                    <textarea name="articulo" placeholder="Articulo" id="articulo" cols="30" rows="10"></textarea>
+                    <input type="button" onclick="javascript:validar2()" value="ENVIAR" id="boton" name="enviar">
+                </form>
+            </section>
+        </div>

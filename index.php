@@ -1,3 +1,6 @@
+<?php
+include ("conexion2.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,30 +17,31 @@
 </head>
 <body>  
         <nav>
-            <p class="textonav"><a href="index.html"><img src="img/Sin nombre.png" alt=""></a></p>            <a class="enlacenav" href="consultas.html">Consultas</a>
+            <p class="textonav"><a href="index.php"><img src="img/Sin nombre.png" alt=""></a></p>            
+            <a class="enlacenav" href="consultas.html">Consultas</a>
             <a class="enlacenav" href="programas.html">Programas de Materias</a>
             <a class="enlacenav" href="https://sites.google.com/view/bibliotecadelaeestn2020">Biblioteca</a>
             <a class="enlacenav" href="https://www.instagram.com/tecnica2berisso/?hl=es-la" target="_blank">Instagram</a>
         </nav>
        
         <div class="principal">
+        <h1>Novedades</h1>
+            <?php
+            $consulta="SELECT * from articulos";
+            $resultado=mysqli_query($conexion2,$consulta);
+
+            while($mostrar=mysqli_fetch_array($resultado)){
+                ?>
+
             <section>
-                <h2>CRONOGRAMA MESA JUNIO 2023</h2>
-                <p class="fecha">miércoles, 14 de junio de 2023</p>
-                <img src="img/mesa junio.png" alt="">
+                
+                <h2><?php echo $mostrar['titulo']?></h2>
+                <p class="fecha"><?php echo $mostrar['fecha']?></p>
+                <p class="descripcion"><?php echo $mostrar['articulo']?></p>
             </section>
-            
-            <section>
-                <h2>INSCRIPCIÓN A MESA DE PREVIOS Y FINALIZACIÓN DE CARRERA TURNO JUNIO</h2>  
-                <p class="fecha">lunes, 29 de mayo de 2023</p>
-                <p class="subtitulo"> INSCRIPCIÓN A MESA DE PREVIOS Y FINALIZACIÓN DE CARRERA TURNO JUNIO 2023</p>
-                <p class="descripcion">
-                    Desde el  29/05 al 04/06 inclusive se podrán inscribir los alumnos que deban rendir materias previas o finalización de carrera. 
-                    Las evaluaciones se llevarán a cabo del  21 al 23 de JUNIO.
-                    Los temas a rendir de cada materia se encuentran en la solapa "Programas de materias" en este mismo blog.
-                    EN LOS PRÓXIMOS DÍAS SE PUBLICARÁ LAS FECHAS Y HORA DE LAS MESAS.</p>
-            </section>
-            
+        <?php
+        }
+        ?>
         </div>
 </body>
 </html>

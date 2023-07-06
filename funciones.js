@@ -18,3 +18,23 @@ function validar() //Funcion javaScript
 	}
 }
 
+function validar2(){
+	{
+
+		//Variables 
+		titulo= ($("#titulo").val().length>0)?true:false;
+		fecha= ($("#fecha").val().length>0)?true:false;
+		articulo = ($("#articulo").val().length>0)?true:false;
+		
+	
+	
+	
+		//Condicional  
+		if (titulo&fecha&articulo) { //Concatenar variables
+			$("#envios").submit();
+			alert("Noticia subida")
+		} else {
+			alert("Completa los campos");
+		}
+	}
+}
