@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(230, 230, 230);
+}
+
+
+.textonav{ /*EESTN2 Emilio Rebuelto*/
+    margin-right: auto;
+    color: black;
+    height: 100%;
+    width: 125px;
+    padding-top: 6px;
+}
+li{
+    list-style: none;
+}
+nav{ /*Todo el nav*/
+    display: flex;
+    align-items:center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding-left: 15px;
+    border-width: 0px;
+    border-color: rgba(161, 161, 161, 0.692);
+    border-style: solid;
+    border-bottom-width: 1px;
+}
+.enlacenav{ /*botones del nav*/
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    padding-bottom: 4px;
+    padding-right: 7px;
+    padding-left: 7px ;
+    border-radius: 10px;
+    outline-style: solid;
+    outline-offset: -15px;
+    outline-width: 0px;
+    outline-color: transparent;
+    font-weight: 400;
+    transition-duration: 0.7s;
+    transition-property: font-weight, outline-width, outline-color, outline-offset;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);    
+}
+
+.enlacenav:hover{ /*qué hacen los botones cuando les pones el mouse encima*/
+    font-weight: 700;
+    font-style: italic;
+    outline-color: black;
+    outline-offset: -1px;
+    outline-width: 3px;
+}
+
+.principal{ /*para q no se sobreponga el nav*/
+    padding-top: 80px;
+}
+
+section{ /*formato de las noticias*/
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: white;
+    padding: 20px;
+    margin: 50px;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+h2,h3{
+    text-align: left;
+    text-transform: uppercase;
+}
+.fecha{
+    text-align: left;
+    
+}
+.subtitulo{
+    color: rgb(25, 105, 160);
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+.descripcion{
+    text-align: left;
+    
+}
+
+img {
+    width: 80%;
+    height: 80%; 
+    object-fit: contain;
+}
+
+.resaltar{
+    background-color: yellow;
+    width: fit-content;
+}
+
+input{
+    color: black;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: baseline;
+    display: grid;
+    transition-duration: 0.5s;
+}
+
+textarea{
+    
+    color: black;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    text-align: left;
+    align-items: baseline;
+    display: grid;
+    transition-duration: 0.5s;
+}
+
+textarea:focus{
+    color: white;
+    background-color: black;
+}
+input:focus{
+    color: white;
+    background-color: black;
+}
+@media screen and (max-width:700px) {
+    .principal{
+        padding-top: 40%; 
+    }
+    nav{
+        max-height: fit-content;
+        display: grid;
+        flex-direction: row;
+        text-align: right;
+    }
+    .textonav{
+        padding: 0px;
+        margin-top: 13px;
+    }
+    .enlacenav{
+
+    }
+}
+
+
