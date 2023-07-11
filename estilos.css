@@ -15,6 +15,10 @@ h1{
     padding: 10px;
 }
 
+.imgdef{
+    max-width: 600px;
+    max-height: 500px;
+}
 
 .textonav{ /*EESTN2 Emilio Rebuelto*/
     margin-right: auto;
@@ -99,7 +103,7 @@ h2,h3{
     
 }
 
-img {
+.imagen {
     width: 80%;
     height: 80%; 
     object-fit: contain;
@@ -146,11 +150,17 @@ input:focus{
         padding-top: 40%; 
     }
     nav{
+        position: absolute;
         max-height: fit-content;
         display: grid;
         flex-direction: row;
         text-align: right;
     }
+    .imgdef{
+        max-width: 250px;
+        
+    }
+
     .textonav{
         padding: 0px;
         margin-top: 13px;

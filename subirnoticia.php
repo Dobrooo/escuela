@@ -8,14 +8,16 @@ include("conexion2.php"); // Cargar codigo desde otro archivo
 $titulo=$_POST['titulo'];
 $fecha=$_POST['fecha'];
 $articulo=$_POST['articulo'];
-
-
+$imagen=$_POST['imagen'];
+$clave=$_POST['clave'];
 
 
 //Insertar nuestros datos en la base de datos
-$insertar = "INSERT INTO articulos (titulo,fecha,articulo) 
-VALUES ('$titulo','$fecha','$articulo')";
-$resultado = mysqli_query($conexion2,$insertar); 
+$insertar = "INSERT INTO articulos (titulo,fecha,articulo,imagen) 
+        VALUES ('$titulo','$fecha','$articulo','$imagen')";
+
+$corroborar = "SELECT * FROM claves WHERE clave = '$clave'";
+$resulta2 = $conexion2->query($corroborar);
 
 
 function redirect($url) {
@@ -25,15 +27,20 @@ function redirect($url) {
 
 
 
-if ($resultado){
+
+if ($resulta2->num_rows >0){
     
     
-    header("Location: index.php");
-    exit();
+    while ($row = $resulta2->fetch_assoc()) {
+        // Access the data in each row
+        $columnValue = $row["clave"];
+        // Do something with the data
+        $resultado = mysqli_query($conexion2,$insertar); 
+        header('location: index.php');
    }
-   
+}
   else{
-   
+   echo("Clave incorrecta.");
   }
 
 ?>

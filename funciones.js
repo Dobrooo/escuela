@@ -6,7 +6,7 @@ function validar() //Funcion javaScript
 	curso= ($("#curso").val().length>0)?true:false;
 	correo = ($("#correo").val().length>0)?true:false;
 	consulta = ($("#consulta").val().length>0)?true:false;
-
+	
 
 
 	//Condicional  
@@ -28,11 +28,11 @@ function validar2(){
 		
 	
 	
-	
+		
+
 		//Condicional  
 		if (titulo&fecha&articulo) { //Concatenar variables
 			$("#envios").submit();
-			alert("Noticia subida")
 		} else {
 			alert("Completa los campos");
 		}

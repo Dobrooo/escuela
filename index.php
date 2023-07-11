@@ -17,7 +17,8 @@ include ("conexion2.php");
 </head>
 <body>  
         <nav>
-            <p class="textonav"><a href="index.php"><img src="img/Sin nombre.png" alt=""></a></p>            
+            <p class="textonav"><a href="index.php"><img class="imagen" src="img/Sin nombre.png" alt=""></a></p> 
+            <a class="enlacenav" href="subirnoticia.html">Subir noticia</a>           
             <a class="enlacenav" href="consultas.html">Consultas</a>
             <a class="enlacenav" href="programas.html">Programas de Materias</a>
             <a class="enlacenav" href="https://sites.google.com/view/bibliotecadelaeestn2020">Biblioteca</a>
@@ -38,6 +39,7 @@ include ("conexion2.php");
                 <h2><?php echo $mostrar['titulo']?></h2>
                 <p class="fecha"><?php echo $mostrar['fecha']?></p>
                 <p class="descripcion"><?php echo $mostrar['articulo']?></p>
+                <img class="imgdef" src="<?php echo $mostrar['imagen']?>">
             </section>
         <?php
         }
